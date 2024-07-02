@@ -22,25 +22,56 @@ const Home = () => {
     <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
          <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-1.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048188_480.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048189_720.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048190_720.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
         <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048191_720(1).jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
+        
         <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048192_720(1).jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
         </div>
+        <!-- Item 6 -->
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/1000048193_720(1).jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 7 -->
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/636469848850033350-usp-nba-brooklyn-nets -at-cleveland-cavaliers-95522351_720(1).jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 8 -->
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/Kobe_Bryant_2014.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 9 -->
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/Magic-Johnson.jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 10 -->
+        <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <div ="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src={"App/vote4goat/client/src/assets/shaquille-oneal-orlando-magic-uns igned-hardwood-classics-dribble-look-photograph_pi4286000_ff_4286840-4d9ea2dc602071ba80fd_full_720(1).jpg"} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+
     </div>
     <!-- Slider indicators -->
     <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
