@@ -1,43 +1,70 @@
-const { Thought } = require('../models');
+const { Player, User } = require('../models/index');
 
 const resolvers = {
   Query: {
-    thoughts: async () => {
-      return Thought.find().sort({ createdAt: -1 });
+    players: async () => {
+      try {
+        const players = await Player.find(); // Find all players
+        return players;
+      } catch (error) {
+        console.error("Error fetching players:", error);
+        throw error;
+      }
     },
-
-    thought: async (parent, { thoughtId }) => {
-      return Thought.findOne({ _id: thoughtId });
+    playerImg: async () => {
+      try {
+        const playersWithImages = await Player.find({ photoUrl: { $exists: true, $ne: null } });
+        return playersWithImages;
+      } catch (error) {
+        console.error("Error fetching players with images:", error);
+        throw error;
+      }
+    },
+    voteCount: async () => {
+      try {
+        const playersWithVotes = await Player.find({ votes: { $exists: true } });
+        return playersWithVotes;
+      } catch (error) {
+        console.error("Error fetching players with votes:", error);
+        throw error;
+      }
     },
   },
 
   Mutation: {
-    addThought: async (parent, { thoughtText, thoughtAuthor }) => {
-      return Thought.create({ thoughtText, thoughtAuthor });
-    },
-    addComment: async (parent, { thoughtId, commentText }) => {
-      return Thought.findOneAndUpdate(
-        { _id: thoughtId },
-        {
-          $addToSet: { comments: { commentText } },
-        },
-        {
-          new: true,
-          runValidators: true,
-        }
-      );
-    },
-    removeThought: async (parent, { thoughtId }) => {
-      return Thought.findOneAndDelete({ _id: thoughtId });
-    },
-    removeComment: async (parent, { thoughtId, commentId }) => {
-      return Thought.findOneAndUpdate(
-        { _id: thoughtId },
-        { $pull: { comments: { _id: commentId } } },
+    updateVote: async (parent, { id, voteCount }) => {
+      return await Player.findOneAndUpdate(
+        { _id: id },
+        { votes: voteCount }, // Ensure the field being updated is correct
         { new: true }
-      );
+      )
     },
-  },
+    register: async (parent, { username, password }) => {
+      const existingUser = await User.findOne({ username });
+      if (existingUser) throw new Error('User already exists');
+
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const user = new User({ username, password: hashedPassword });
+      await user.save();
+
+      const payload = { user: { id: user.id } };
+      const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+      return { token, user };
+    },
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username });
+      if (!user) throw new Error('Invalid credentials');
+
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch) throw new Error('Invalid credentials');
+
+      const payload = { user: { id: user.id } };
+      const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
+
+      return { token, user };
+    },
+  }
 };
 
 module.exports = resolvers;
