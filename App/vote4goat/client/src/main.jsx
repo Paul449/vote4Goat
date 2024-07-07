@@ -1,31 +1,38 @@
-import ReactDOM from 'react-dom/client'
-// Import the required Provider component and createBrowserRouter helper function
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css'
-
-import App from './App.jsx'
-import Error from './pages/Error';
-import Home from './pages/Home';
-import SingleThought from './pages/SingleThought';
-
-// Define the router object which will control the Provider's ability to display certain pages to match the proper URLs
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: '/thoughts/:thoughtId',
-        element: <SingleThought />,
-      },
-    ],
-  },
-]);
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom/dist';
+import './index.css';
+//import pages
+import App from './App.jsx';
+import Home from './pages/Home.jsx';
+import Login from './pages/Login.jsx';
+import SignUp from './pages/signUp.jsx';
+import Landing from './pages/Landing.jsx';
+import Error from './pages/Error.jsx';
+//defining routes
+const router = createBrowserRouter([{
+  path:'/',
+  element: <App/>,
+  errorElement: <Error/>,
+  children:[
+    {
+      index:true,
+      element:<Landing />
+    },
+    {
+      path:'/Login',
+      element:<Login />
+    },
+    {
+      path:'/Home',
+      element:<Home />
+    },
+    {
+      path:'/signUp',
+      element:<SignUp />
+    }
+  ]
+}])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />

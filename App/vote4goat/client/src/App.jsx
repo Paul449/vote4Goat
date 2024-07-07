@@ -1,29 +1,41 @@
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-// Bring in the Outlet component which will render the proper pages conditionally on the browser's URL
-import { Outlet } from 'react-router-dom';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-const client = new ApolloClient({
+import {
+  ApolloClient, //
+  InMemoryCache, // this is where we are going to store our data from our queries
+  ApolloProvider, // this a component useful for managing GraphQL mutations and queries; connecting our react components to graphQL server
+  createHttpLink,
+} from '@apollo/client';
+//
+import {setContext} from '@apollo/client/link/context';
+//
+import {Outlet} from 'react-router-dom';
+//constructing API endpoint
+const httpLink = createHttpLink({
   uri: '/graphql',
-  cache: new InMemoryCache(),
 });
-
-function App() {
-  // All the elements in this return statement will render regardless of the URL
-  return (
-    <ApolloProvider client={client}>
-      <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
-        <div className="container">
-          {/* The Outlet component will be replaced by the proper page based on the URL */}
-          <Outlet />
-        </div>
-        <Footer />
-      </div>
-    </ApolloProvider>
-  );
-}
-
+//Constructing request middleware which allow json web token to be attached when authorizing
+const authLink = setContext((_,{headers})=>{
+  const token = localStorage.getItem('id_token');
+  return{
+    headers:{
+      ...headers,
+      authorization: token ? `Bearer ${token}`:'',
+    },
+  }
+});
+//connecting with Apollo client 
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+})
+//starting app
+function App(){
+  return(<ApolloProvider client={client}>
+    <div className='App'>
+    <div className='Container'>
+      <Outlet/>
+    </div>
+    </div>
+  </ApolloProvider>)
+};
+//exporting our react application to our main.jsx 
 export default App;
