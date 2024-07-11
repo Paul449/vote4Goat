@@ -9,6 +9,7 @@ import Login from './pages/Login.jsx';
 import SignUp from './pages/signUp.jsx';
 import Landing from './pages/Landing.jsx';
 import Error from './pages/Error.jsx';
+import Profile from './pages/Profile.jsx';
 //defining routes
 const router = createBrowserRouter([{
   path:'/',
@@ -30,6 +31,10 @@ const router = createBrowserRouter([{
     {
       path:'/signUp',
       element:<SignUp />
+    },
+    {
+      path:'/Profile',
+      element: <Profile />
     }
   ]
 }])
