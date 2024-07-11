@@ -9,6 +9,9 @@ export default function NavBar(){
     function landingPage(){
       navigate('/')
     }
+    function profilePage(){
+      navigate('/Profile')
+    }
     return(
       <>
     <div className='navBar'>
@@ -17,7 +20,7 @@ export default function NavBar(){
       </div>
       <div className='Logout-Settings'>
         <button onClick={landingPage} id='Logout'>Logout</button>
-        <button id='Settings'>Settings</button>
+        <button onClick={profilePage} id='Settings'>Profile</button>
       </div>
         <img src={logo} id='Logo'></img>
       </div>

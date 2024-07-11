@@ -11,7 +11,6 @@ With Vote4GOAT, its never a bad time to Vote for your 🐐
   - [Technology Used](#technology-used)
   - [Credits](#credits)
   - [License](#license)
-
 ## Description
 
 Vote4Goat is an intuitive and engaging web application designed for basketball fans to rate and vote on their top favorite NBA players of all time. Whether you’re a longtime fan or rookie to the game, you’ll enjoy voting for the GOAT!
@@ -21,7 +20,6 @@ Vote4Goat is an intuitive and engaging web application designed for basketball f
 2. Install Apollo Client and React
 3. Install all other necessary packages
 4. Run application through proper local host or server
-
 ## Usage
   - Step 1: Set up development environment including downloading and installing necessary packages.
   

@@ -11,19 +11,8 @@ import img9 from './assets/Magic-Johnson.jpg';
 import img10 from './assets/shaquille-oneal-orlando-magic-uns igned-hardwood-classNameics-dribble-look-photograph_pi4286000_ff_4286840-4d9ea2dc602071ba80fd_full_720(1).jpg'
 */
 function PlayerButtons(){
-
     return(
         <>
-    <div id="Previous">
-    <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span className="sr-only">Previous</span>
-        </span>
-    </button>
-    </div>
     <div className="PlayerButtons">
         <button type="button" id="Player1" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" id="Player2" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
@@ -35,8 +24,18 @@ function PlayerButtons(){
         <button type="button" id="Player8" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
         <button type="button" id="Player9" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
         <button type="button" id="Player10" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-        <div id="Next">
-    <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <div id="Previous">
+    <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span className="sr-only">Previous</span>
+        </span>
+    </button>
+    </div>
+    <div id="Next">
+    <button type="button"  className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
         <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
             <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
@@ -44,7 +43,7 @@ function PlayerButtons(){
             <span className="sr-only">Next</span>
         </span>
     </button>
-        </div>
+    </div>
         </div>
       </>  
 );
