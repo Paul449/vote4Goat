@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+/*hghghg */
 import SurveyComponent from "../components/SurveyComponent"
 function Profile(){
     return(
