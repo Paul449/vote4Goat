@@ -1,10 +1,12 @@
 const db = require('../config/connection');
-const { Thought } = require('../models');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const { Player } = require('../models');
+const playerSeeds = require('./playerSeed.json');
 const cleanDB = require('./cleanDB');
+
 db.once('open', async () => {
-  await cleanDB('Thought', 'thoughts');
-  await Thought.create(thoughtSeeds);
+  await cleanDB('Player');
+  await Player.deleteMany({})
+  await Player.create(playerSeeds);
 
   console.log('all done!');
   process.exit(0);

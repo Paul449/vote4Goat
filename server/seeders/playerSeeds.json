@@ -1,0 +1,52 @@
+[
+  {
+      "name": "Michael Jordan",
+      "photoUrl": "client/src/assets/images/MJ.jpg",
+      "votes": 0
+    },
+    {
+      "name": "LeBron James",
+      "photoUrl":"client/src/assets/images/LeBron.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "photoUrl":"client/src/assets/images/Shaq.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Kobe Bryant",
+      "photoUrl":"client/src/assets/images/Kobe.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "photoUrl":"client/src/assets/images/Kareem.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Hakeem Olajuwon",
+      "photoUrl":"client/src/assets/images/Hakeem.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Tim Duncan",
+      "photoUrl":"client/src/assets/images/Timmy.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Magic Johnson",
+      "photoUrl":"client/src/assets/images/Magic.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Larry Bird",
+      "photoUrl":"client/src/assets/images/Bird.jpg",
+      "votes": 0
+    },
+    {
+      "name": "Wilt Chamberlain",
+      "photoUrl":"client/src/assets/images/Wilt.jpg",
+      "votes": 0
+    }      
+]
