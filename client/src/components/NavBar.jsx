@@ -28,3 +28,4 @@ export default function NavBar(){
       )
 };
 
+//logo settings
