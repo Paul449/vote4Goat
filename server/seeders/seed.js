@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 const { Player } = require('../models');
-const playerSeeds = require('./playerSeed.json');
+const playerSeeds = require('./playerSeeds.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {

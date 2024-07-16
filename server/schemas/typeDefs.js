@@ -1,6 +1,6 @@
-const { gql } = require('apollo-server');
 
-const typeDefs = gql`
+
+const typeDefs = `
     type User {
       _id: ID!
       username: String!
@@ -24,7 +24,7 @@ const typeDefs = gql`
     type Query {
       user: User!
       players: [Player]
-      voteCount: [Player] # Add this line to define the voteCount query
+      voteCount: [Player] 
       playerImg: [Player]
     }
 
