@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "../index.css";
 import List from "../List";
 import { getInitialData, genNextData } from "../data";
-
 //shows players ranking
 const PlayerList = function(){
     const [data, setData] = useState(getInitialData());

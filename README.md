@@ -37,6 +37,8 @@ Repo: https://github.com/Paul449/vote4Goat
 
 Deployed: 
 
+Presentation: https://docs.google.com/presentation/d/1_HGCJDAnGvq53nJce9sqIkcJn7LXVxsBe6ypQgsW52w/edit?usp=sharing
+
 ## Screenshot
 
 ## Technology Used
