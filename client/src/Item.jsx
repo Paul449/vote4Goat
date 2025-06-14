@@ -1,7 +1,8 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
+//graphQL
 const GET_PLAYER = gql`
-  query getPlayers{
+  query getPlayers{ 
   players{
      _id 
       name 
