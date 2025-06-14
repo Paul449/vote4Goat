@@ -10,7 +10,7 @@ import {setContext} from '@apollo/client/link/context';
 import {Outlet} from 'react-router-dom';
 //constructing API endpoint
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: 'https://your-render-url.onrender.com/graphql',
 });
 //Constructing request middleware which allow json web token to be attached when authorizing
 const authLink = setContext((_,{headers})=>{
